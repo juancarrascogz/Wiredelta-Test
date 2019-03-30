@@ -1,5 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta name="description" content="WireDelta Tech Sample">
+        <meta name="author" content="Juan Carrasco">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="charset" content="utf-8">
+        <title>My Day</title>
 
-
+        <link rel="stylesheet" type="text/css" href="mobile.css" media="all">
+        <link rel="stylesheet" type="text/css" href="tablet.css" media="all">
+        <link rel="stylesheet" type="text/css" href="desktop.css" media="all">
+        
+        <script></script>
+    </head>
+    
+    <body>
+        <div class="container1">
+            <div class="header1">
+                <div class="header2">
+                    <h1>My Day</h1>
+                </div>
+                <div class="header3">
+                    <p>Tuesday 12th June 2019<br/>10:30 AM</p>
+                </div>
+            </div>
+                
+            <div class="section1">
+                <div class="section2">
+                    <h3>Today's Task List:</h3>
+                </div>
+                <div class="section3">
+                    <div class="section4">
+                        <ul>
+                            <li>07:00</li>
+                            <div class="line"></div>
+                            <li>08:00 - Wake up!</li>
+                            <div class="line"></div>
+                            <li>09:00 - Breakfast</li>
+                            <div class="line"></div>
+                            <li>10:00</li>
+                            <div class="line"></div>
+                            <li>11:00</li>
+                            <div class="line"></div>
+                            <li>12:00 - Football match</li>
+                            <div class="line"></div>
+                            <li>13:00</li>
+                            <div class="line"></div>
+                            <li>14:00 - Lunch</li>
+                            <div class="line"></div>
+                            <li>15:00</li>
+                            <div class="line"></div>
+                            <li>16:00 - Cinema: Avengers - End Game</li>
+                            <div class="line"></div>
+                            <li>17:00</li>
+                            <div class="line"></div>
+                            <li>18:00</li>
+                        </ul>
+                    </div>
+                    <div class="section5">
+                        <button id="addTask" class="button1">Add</button>
+                        <button id="modifyTask" class="button1">Modify</button>
+                        <button id="deleteTask" class="button1">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer1">
+                <div class="footer2">
+                    <button id="changeBackground" class="button2">Background</button>
+                </div>
+                <div class="footer3">
+                    <form id="form" method="post">
+                        <label for="title" class="label">New title: </label>
+                        <input id="inputTitle" class="input" name="title" type="text" title="New title" placeholder="maxlenght. 15" maxlength="15" size="30"/>
+                        <button id="send" class="button3">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <script></script>
 </html>
