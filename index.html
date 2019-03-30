@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="tablet.css" media="all">
         <link rel="stylesheet" type="text/css" href="desktop.css" media="all">
         
-        <script></script>
+        <script type="text/javascript" src="functions.js"></script>
     </head>
     
     <body>
@@ -21,10 +21,10 @@
                     <h1>My Day</h1>
                 </div>
                 <div class="header3">
-                    <p>Tuesday 12th June 2019<br/>10:30 AM</p>
+                    <p><script>document.write(formatDate(new Date())); </script><br/><script>document.write(formatTime(new Date())); </script></p>
                 </div>
             </div>
-                
+            
             <div class="section1">
                 <div class="section2">
                     <h3>Today's Task List:</h3>
@@ -69,15 +69,11 @@
                     <button id="changeBackground" class="button2">Background</button>
                 </div>
                 <div class="footer3">
-                    <form id="form" method="post">
                         <label for="title" class="label">New title: </label>
-                        <input id="inputTitle" class="input" name="title" type="text" title="New title" placeholder="maxlenght. 15" maxlength="15" size="30"/>
-                        <button id="send" class="button3">Send</button>
-                    </form>
+                        <input id="inputTitle" class="input" name="title" type="text" title="New title" placeholder="My Day (max.15)" maxlength="15" size="30"/>
+                        <div id="send" class="button3" onclick="changeTitle();">Change</div>
                 </div>
             </div>
         </div>
     </body>
-    
-    <script></script>
 </html>
