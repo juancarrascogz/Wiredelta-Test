@@ -49,3 +49,26 @@ function changeTitle(){
        document.title = newtitle;
     }
 }
+
+function changeBackgroundColour(){
+    
+    var background = document.getElementById("background");
+    var colorValue = document.getElementById("color").value;
+    
+    if(colorValue=="blue"){
+       background.className = "blue";
+    }
+    else if(colorValue=="green"){
+       background.className = "green";
+    }
+    else if(colorValue=="yellow"){
+       background.className = "yellow";
+    }
+    else if(colorValue=="pink"){
+        background.className = "pink";
+    }
+    else if(colorValue=="default"){
+        background.className = "default";
+    }
+    
+}

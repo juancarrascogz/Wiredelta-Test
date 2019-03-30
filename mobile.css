@@ -7,9 +7,12 @@
     }
     html, body{
         height: 100%;
-        width: 100%;
+        min-height: 1400px;
         font-family: Verdana;
-        background-color: #d2e0e1;
+    }
+    #background {
+        height: 100%;
+        width: 100%;
     }
     .container1{
         background-color: #E8D1C9;
@@ -20,7 +23,6 @@
         width: 80%;
         box-shadow: 5px 10px 5px 0px #000;
         min-height: 900px;
-        min-width: 600px;
     }
     .header1{
         background-color: #fff;
@@ -92,7 +94,7 @@
         display: inline-block;
         width: 15%;
         font-family: Verdana;
-        font-size: 1.2em;
+        font-size: 0.7em;
         background-color: #75ACEC;
         padding: 1%;
         margin-right: 3%;
@@ -122,35 +124,41 @@
         display: block;
         margin: 0px auto;
     }
+    .select1{
+        display: block;
+        margin: 0px auto;
+        margin-top: 4%;
+    }
     .button2{
         display: block;
         margin: 0px auto;
         width: 50%;
         font-family: Verdana;
-        font-size: 1.2em;
-        background-color: #75ACEC;
-        padding: 2%;
-        margin-top: 9%;
-        box-shadow: 2px 2px 5px #999;
-    }
-    .button2:active{
-        background-color: #0f7abc;
-        margin-top: 10%;
-    }
-    .button3{
-        display: block;
-        margin: 0px auto;
-        width: 50%;
-        font-family: Verdana;
         text-align: center;
-        font-size: 1.5em;
+        font-size: 1.2em;
         background-color: #75ACEC;
         padding: 2%;
         margin-top: 3%;
         box-shadow: 2px 2px 5px #999;
     }
-    .button3:active{
+    .button2:active{
         background-color: #0f7abc;
         margin-top: 5%;
+    }
+    
+    .default{
+        background-color: #d2e0e1;
+    }
+    .blue{
+        background-color: #97befc;
+    }
+    .green{
+        background-color: #9eff93;
+    }
+    .yellow{
+        background-color: #ffff7c;
+    }
+    .pink{
+        background-color: #ffe5e5;
     }
 }
