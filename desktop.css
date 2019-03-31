@@ -28,7 +28,28 @@
         border: 2px #000 solid;
         margin: 5% 5% 2% 5%;
         width: 90%;
-        height: 10%
+        height: 10%;
+        display: table;
+    }
+    .date{
+        position: relative;
+    }
+    .spanTitle{
+        position: absolute;
+        right: 0%;
+        width: 0%;
+        background-color: #fff;
+        border-left: 2px solid #000;
+        
+        animation: typemachine 5s infinite alternate steps(50);
+    }
+    @keyframes typemachine {
+        from {
+            width: 100%;
+        }
+        to{
+            width: 0%;
+        }
     }
     .header2{
         display: inline-block;
