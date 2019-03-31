@@ -125,7 +125,7 @@ function changeContainerColour(){
     }
 }
 
-//Tasks
+//Today Tasks
 function getDay(){
     var d = new Date();
     var weekday = new Array(7);
@@ -172,6 +172,7 @@ function getDay(){
       })
   });
 
+//Tomorrow Tasks
 function getTomorrow(){
     var d = new Date();
     var weekday = new Array(7);
@@ -203,6 +204,30 @@ readTextFile("./tasks.json", function(text){
   
           document.getElementById("time2").appendChild(parafTime);
           document.getElementById("description2").appendChild(parafDescr);
+        }
+      })
+  });
+
+//Message of the Day
+function getNumberDay(){
+    var d = new Date();
+    var numberDay = d.getDate();
+            
+    return numberDay;
+}
+
+readTextFile("./messages.json", function(text){
+      var data = JSON.parse(text);
+    
+      data.forEach(item => {
+        if(item.id === getNumberDay()){
+
+          var parafTime = document.createElement("p");
+          var message = document.createTextNode(item.message);
+  
+          parafTime.appendChild(message)
+  
+          document.getElementById("message").appendChild(parafTime);
         }
       })
   });
