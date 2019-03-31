@@ -89,11 +89,18 @@
         width: 80%;
         height: 70%;
         overflow-x: auto;
+        padding: 1% 0% 0% 1%;
+    }
+    table{
+        width: 100%;
+    }
+    th, td {
+        text-align: left;
     }
     .section5{
         height: 30%;
         width: 100%;
-        margin-top: 2%;
+        margin-top: 1%;
     }
     .section6{
         display: inline-block;
@@ -132,21 +139,23 @@
         height: 100%;
         float: right;
     }
-    .button2{
+    .tTasks{
+        font-size: 0.9em;
+    }
+    .section7 p{
+        text-align: center;
+        margin-bottom: 1%;
+    }
+    .tomorrow{
+        border: 2px solid #000;
         display: block;
         margin: 0px auto;
-        width: 25%;
-        font-family: Verdana;
-        font-size: 1.3em;
-        background-color: #75ACEC;
-        padding: 1%;
-        margin-top: 6.5%;
-        margin-right: 38%;
-        box-shadow: 2px 2px 5px #999;
-    }
-    .button2:active{
-        background-color: #0f7abc;
-        margin-top: 7.5%;
+        width: 60%;
+        height: 70%;
+        overflow: scroll;
+        overflow-x: auto;
+        font-size: 0.6em;
+        padding: 2% 0% 0% 2%;
     }
     .footer1{
         width: 90%;
@@ -184,7 +193,7 @@
         margin: 0px auto;
         margin-top: 2%;
     }
-    .button3{
+    .button2{
         display: block;
         margin: 0px auto;
         width: 30%;
@@ -196,7 +205,7 @@
         margin-top: 3%;
         box-shadow: 2px 2px 5px #999;
     }
-    .button3:active{
+    .button2:active{
         background-color: #0f7abc;
         margin-top: 4%;
     }

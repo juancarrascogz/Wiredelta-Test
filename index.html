@@ -36,7 +36,7 @@
 
                 <div class="section1">
                     <div class="section2">
-                        <h3>Today's Task List:</h3>
+                        <h3>Today Task List:</h3>
                     </div>
                     <div class="section3">
                         <div class="section4">
@@ -47,7 +47,11 @@
                                         <th>Description</th>
                                     </tr>
                                 </thead>
-                                <tbody id="res">
+                                <tbody>
+                                  <tr>
+                                      <td id="time"></td>
+                                      <td id="description"></td>
+                                  </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -59,7 +63,23 @@
                                 </form>
                             </div>
                             <div class="section7">
-                                <button id="modifyTask" class="button2">Mod</button>
+                                <p class="tTasks">Tomorrow tasks</p>
+                                <div class="tomorrow">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Time</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                              <td id="time2"></td>
+                                              <td id="description2"></td>
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -87,7 +107,7 @@
                     </div>
                     <div class="footer3">
                             <input type="text" id="inputTitle" class="input" name="title" title="New title" placeholder="Add a new title (max.10)" maxlength="10"/>
-                            <div id="send" class="button3" onclick="changeTitle();">Change</div>
+                            <div id="send" class="button2" onclick="changeTitle();">Change</div>
                     </div>
                 </div>
             </div>

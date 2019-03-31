@@ -125,20 +125,84 @@ function changeContainerColour(){
     }
 }
 
-
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
+//Tasks
+function getDay(){
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] =  "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+  
+    return weekday[d.getDay()];
+  }
+  
+  function readTextFile(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+      }
+      rawFile.send(null);
+  }
+  
+  readTextFile("./tasks.json", function(text){
+      var data = JSON.parse(text);
+      
+      data.forEach(item => {
+        if(item.day === getDay()){
+          
+          var parafTime = document.createElement("p");
+          var time = document.createTextNode(item.time);
+          var parafDescr = document.createElement("p");
+          var description = document.createTextNode(item.description);
+  
+          parafTime.appendChild(time)
+          parafDescr.appendChild(description)
+  
+          document.getElementById("time").appendChild(parafTime);
+          document.getElementById("description").appendChild(parafDescr);
         }
-    }
-    rawFile.send(null);
-}
+      })
+  });
+
+function getTomorrow(){
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] =  "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    
+  
+    return weekday[d.getDay() + 1];
+  }
 
 readTextFile("./tasks.json", function(text){
-    var data = JSON.parse(text);
-    console.log(data);
-});
+      var data = JSON.parse(text);
+    
+      data.forEach(item => {
+        if(item.day === getTomorrow()){
+
+          var parafTime = document.createElement("p");
+          var time = document.createTextNode(item.time);
+          var parafDescr = document.createElement("p");
+          var description = document.createTextNode(item.description);
+  
+          parafTime.appendChild(time)
+          parafDescr.appendChild(description)
+  
+          document.getElementById("time2").appendChild(parafTime);
+          document.getElementById("description2").appendChild(parafDescr);
+        }
+      })
+  });
