@@ -132,11 +132,20 @@
         color: #000;
     }
     .section6 input[type=text]:valid{
-        display: block;
-        margin: 0px auto;
-        width: 50%;
+        width: 100%;
+        display: inline-block;
         border: 2px solid #000;
         padding: 2%;
+    }
+    .input1{
+        text-align: center;
+    }
+    .input2{
+        display: inline-block;
+        margin-right: 5%;
+    }
+    .input3{
+        display: inline-block;
     }
     .button1{
         display: block;
@@ -259,16 +268,16 @@
   
     
     :valid::-webkit-input-placeholder {
-        color: #ccc;
+        color: #4f4848;
     }
     :valid::-moz-placeholder {
-        color: #ccc;
+        color: #4f4848;
     }
     :valid::-moz-placeholder {
-        color: #ccc;
+        color: #4f4848;
     }
     :valid::-ms-input-placeholder {
-        color: #ccc;
+        color: #4f4848;
     }
     :focus::-webkit-input-placeholder{
         color:transparent;

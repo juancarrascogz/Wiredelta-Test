@@ -231,3 +231,71 @@ readTextFile("./messages.json", function(text){
         }
       })
   });
+
+//Add an hour (tasks) 
+function addHour(){
+    
+    var list = document.getElementById("dataTasks"),
+	taskInputHour = document.getElementById("taskInputHour"),
+	btnNewHour = document.getElementById("btn-add");
+ 
+	var addNewHour = function(){
+		var hour = taskInputHour.value,
+            newtr = document.createElement("tr"),
+			newtd = document.createElement("td"),
+			content = document.createTextNode(hour);
+ 
+		if (hour === "") {
+			taskInputHour.setAttribute("placeholder", "Add an hour");
+			return false;
+		}
+        
+        list.appendChild(newtr);
+		newtd.appendChild(content);
+		list.appendChild(newtd);
+ 
+		taskInputHour.value = "";
+ 
+		for (var i = 0; i <= list.children.length -1; i++) {
+			list.children[i].addEventListener("click", function(){
+				this.parentNode.removeChild(this);
+			});
+		}
+	};
+    
+	btnNewHour.addEventListener("click", addNewHour);
+    
+}
+
+//Add a taks
+function addTask(){
+    
+    var list = document.getElementById("dataTasks"),
+	taskInput = document.getElementById("taskInput"),
+	btnNewTask = document.getElementById("btn-add");
+ 
+	var addNewTask = function(){
+		var task = taskInput.value,
+			newtd = document.createElement("td"),
+			content = document.createTextNode(task);
+ 
+		if (task === "") {
+			taskInput.setAttribute("placeholder", "Add a task");
+			return false;
+		}
+ 
+		newtd.appendChild(content);
+		list.appendChild(newtd);
+ 
+		taskInput.value = "";
+ 
+		for (var i = 0; i <= list.children.length -1; i++) {
+			list.children[i].addEventListener("click", function(){
+				this.parentNode.removeChild(this);
+			});
+		}
+	};
+    
+	btnNewTask.addEventListener("click", addNewTask);
+    
+}
